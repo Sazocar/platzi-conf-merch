@@ -11,15 +11,12 @@
   align-items: center;
   margin: 10px 0 0 0;
 }
-.Checkout-item .fas {
-  margin: 0 0 0 10px;
-  color: rgba(0,0,0,0.4);
-  cursor: pointer;
-}
+
 .Checkout-item button {
   background-color: transparent;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 .Checkout-element {
   display: flex;

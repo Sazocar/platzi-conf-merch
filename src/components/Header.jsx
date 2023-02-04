@@ -1,7 +1,9 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { useAppContext } from '../context/AppContext';
+import { BsFillBasket2Fill } from 'react-icons/bs';
 import '../styles/components/Header.css';
+
 
 const Header = () => {
   const context = useAppContext();
@@ -13,9 +15,11 @@ const Header = () => {
       </h1>
       <div className="Header-checkout">
         <Link to="/checkout">
-          <i className="fas fa-shopping-basket" />
+          <BsFillBasket2Fill title="Checkout" size="1.5rem" />
         </Link>
-        {context.state.cart.length > 0 && <div className="Header-alert">{context.state.cart.length}</div>}
+        {context.state.cart.length > 0 && (
+          <div className="Header-alert">{context.state.cart.length}</div>
+        )}
       </div>
     </div>
   );
