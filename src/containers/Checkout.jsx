@@ -9,7 +9,6 @@ const Checkout = () => {
   const context = useAppContext();
   const { removeFromCart } = context;
   const { cart } = context.state;
-  console.log(cart);
 
   const handleRemove = (product) => {
     removeFromCart(product);

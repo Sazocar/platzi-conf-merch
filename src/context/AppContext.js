@@ -20,9 +20,17 @@ const AppProvider = ({ children }) => {
     });
   };
 
+  const addToBuyer = (payload) => {
+    setState({
+      ...state,
+      buyer: [...state.buyer, payload]
+    })
+  }
+
   const context = {
     addToCart,
     removeFromCart,
+    addToBuyer,
     state,
   };
 
